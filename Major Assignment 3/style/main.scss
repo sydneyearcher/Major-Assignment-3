@@ -1,0 +1,154 @@
+@import 'variables';
+@import 'mixins';
+//importing .scss pages
+
+
+//c0de for background image
+body{
+  background-image: url(../images/cheetahprint.jpg);
+}
+
+//header
+header{
+  @include responsive-font-size(768px, 1024px, 16px, 18px);
+  color: $base-color;
+  box-shadow: 0 0 10px $secondary-color;
+     font-family: $font-family;
+     margin: 0 auto;
+     margin-bottom: 20px;
+     background-color: $primary-color;
+     border: 5px solid $base-color;
+     text-align: center;
+     width: 50vw;
+     border-radius: 10px;
+
+}
+
+/*for the body columns*/
+.col {
+  @include responsive-font-size(768px, 1024px, 16px, 18px);
+  color: #fefefe;
+}
+.grid {
+  @include responsive-font-size(768px, 1024px, 16px, 18px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin: 50px auto;
+  padding: 0 100px;
+}
+
+.col {
+  @include responsive-font-size(768px, 1024px, 16px, 18px);
+  background-color:  $primary-color;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+//headers in each column
+.col h3 {
+  @include responsive-font-size(768px, 1024px, 16px, 18px);
+  font-size: 24px;
+  font-weight: bold ;
+  margin-bottom: 10px;
+}
+//for paragraphs in each column
+.col p {
+  @include responsive-font-size(768px, 1024px, 16px, 18px);
+  font-size: $base-font-size;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+
+/*FOR THE SLIDESHOW*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+  border-radius: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}

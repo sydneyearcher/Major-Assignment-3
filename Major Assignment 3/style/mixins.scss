@@ -1,0 +1,36 @@
+//centers elements in container
+@mixin center-element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+//responsive font
+@mixin responsive-font-size($min-screen, $max-screen, $min-font-size, $max-font-size) {
+  @media screen and (min-width: $min-screen) and (max-width: $max-screen) {
+    font-size: calc(#{$min-font-size} + #{($max-font-size - $min-font-size)} * ((100vw - #{$min-screen}) / #{($max-screen - $min-screen)}));
+  }
+}
+
+//responsive design for three screens
+@mixin responsive-screen-size($min-screen1, $max-screen1, $min-screen2, $max-screen2, $min-screen3, $max-screen3) {
+  @media screen and (min-width: $min-screen1) and (max-width: $max-screen1) {
+    // Styles for first screen size
+  }
+  
+  @media screen and (min-width: $min-screen2) and (max-width: $max-screen2) {
+    // Styles for second screen size
+  }
+  
+  @media screen and (min-width: $min-screen3) and (max-width: $max-screen3) {
+    // Styles for third screen size
+  }
+}
+
+
+
+
+
